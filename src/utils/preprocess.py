@@ -1,3 +1,4 @@
+import os
 from io import StringIO
 from pdfminer.layout import LAParams
 from pdfminer.pdfparser import PDFParser
@@ -49,6 +50,8 @@ def pdf_to_text(pdf: str, use_high_level=False) -> str:
 
         # get the content as text
         text = output_string.getvalue()
+
+        # close opened streams
         device.close()
         output_string.close()
 
@@ -56,6 +59,6 @@ def pdf_to_text(pdf: str, use_high_level=False) -> str:
 
 
 if __name__ == "__main__":
-    path = '../../paper/paper.pdf'
+    path = './data/external/PDFs'
     print(pdf_to_text(path))
 
