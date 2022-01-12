@@ -5,7 +5,7 @@ from src.utils.save import save_to_text
 from src.utils.preprocess import pdf_to_text
 
 
-def preprocess_and_save_pdfs(directory: str, out: str = './data/preprocessed/') -> None:
+def preprocess_and_save_pdfs(directory: str, out: str = './data/interim/') -> None:
     """
     Preprocesses, cleans and save all PDFs contents to files with the same filenames.
     :param directory: str
