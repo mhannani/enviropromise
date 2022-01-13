@@ -18,5 +18,6 @@ def save_to_text(text: str, filename: str, out: str) -> None:
     with open(os.path.join(out, f"{filename}.txt"), "w") as text_file:
         text_file.write(text)
 
+
 if __name__ == "__main__":
     save_to_text('hello', 'done', '../../data/preprocessed/')

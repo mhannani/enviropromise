@@ -8,7 +8,7 @@ regularization on plastic bags and protection of marine biodiversity of Mediterr
 and Pacific oceans.
 
 Different approach will be used to target the problem of feature extraction,
-specifically, bans and sanction from legal documents:
+specifically, bans.json and sanction from legal documents:
 
 
 Machine Learning model:
