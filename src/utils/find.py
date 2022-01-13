@@ -41,5 +41,5 @@ def find_json(directory: str) -> List[str]:
 
 
 if __name__ == "__main__":
-    # print(find_pdfs('../../data/external'))
-    print(find_json('../../data/preprocessed'))
+    print('pdfs:', find_pdfs('../../data/external'))
+    print('jsons:', find_json('../../data/preprocessed'))

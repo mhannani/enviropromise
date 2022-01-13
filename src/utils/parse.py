@@ -1,4 +1,5 @@
 # parser functions
+import json
 from typing import List, Tuple
 
 
@@ -10,11 +11,23 @@ def parse_json(path: str) -> Tuple[str, str, int, int, List[str]]:
     :return: str, str, int, int, List[str]
         filename, date, article number, number of sentences, List of sentences
     """
-    pass
+    # read json file
+    with open(path, 'r') as json_file:
+        content = json.load(json_file)
+
+    # get entities
+    filename = content['filename']
+    date = content['date']
+    n_article = content['article number']
+    sentences_len = content['len']
+    sentences = content['sentences']
+
+    return filename, date, n_article, sentences_len, sentences
 
 
 if __name__ == "__main__":
     json_path = "../../data/preprocessed/mor96784.json"
-    sentences = parse_json(json_path)
-    print(sentences[0])
-    print('number of sentences:', len(sentences))
+    file_name, d, n_art, sen_len, sens = parse_json(json_path)
+    print('filename:', file_name)
+    print('date:', d)
+    print('len:', sen_len)
