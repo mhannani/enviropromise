@@ -30,8 +30,16 @@ def find_json(directory: str) -> List[str]:
     :return: List[str]
         List of absolute paths
     """
-    pass
+
+    jsons = []
+    for root, folders, files in os.walk(directory):
+        for file in files:
+            if file.endswith('json'):
+                jsons.append(file)
+
+    return jsons
 
 
 if __name__ == "__main__":
-    print(find_pdfs('../../data/external'))
+    # print(find_pdfs('../../data/external'))
+    print(find_json('../../data/preprocessed'))

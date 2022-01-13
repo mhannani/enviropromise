@@ -4,9 +4,9 @@ from src.utils.find import find_json
 from src.utils.parse import parse_json
 
 
-def annotate_and_save(directory: str, ) -> None:
+def annotate_and_save(directory: str, data_ready_path: str) -> None:
     """
-    Annotates and saves to file
+    Annotates and saves to file.
     :return: None
     """
 
@@ -22,12 +22,5 @@ def annotate_and_save(directory: str, ) -> None:
             pass
 
 
-
-
-
-    pass
-
-
 if __name__ == "__main__":
-
-    annotate_and_save()
+    annotate_and_save(directory=JSON_OUT, data_ready_path=DATA_READY_OUT)
