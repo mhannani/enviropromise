@@ -21,5 +21,17 @@ def find_pdfs(directory: str) -> List[str]:
     return pdfs
 
 
+def find_json(directory: str) -> List[str]:
+    """
+    Recursively finds json files and returns list of found paths.
+
+    :param directory: str
+        Path to directory where json files resides
+    :return: List[str]
+        List of absolute paths
+    """
+    pass
+
+
 if __name__ == "__main__":
     print(find_pdfs('../../data/external'))
