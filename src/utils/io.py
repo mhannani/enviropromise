@@ -2,7 +2,7 @@ import os
 import platform
 
 
-def get_os():
+def get_os() -> str:
     """
     Get the operating system running the script.
     :return: str, Linux/ or Windows for linux/ or windows base operating system,
